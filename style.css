@@ -1,0 +1,246 @@
+:root {
+    --slider-width: 95vw; /* Largeur du slider */
+    --slider-height: 350px; /* Hauteur du slider */
+    --slider-items: 7; /* Nombre d'éléments dans le slider */
+}
+ /* Styles généraux */
+body {
+
+    background-image: url('../images/Background/maimouna.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    font-family: 'Arial', sans-serif;
+    
+}
+
+/* Header */
+#header {
+    background-color: #FBE5B6;
+    padding: 20px 0;
+}
+
+.burger-title {
+    color: #e7480f;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #000;
+    margin-top: 15px;
+}
+
+.fork-icon {
+    height: 40px;
+    margin: 0 15px;
+    filter: invert(65%) sepia(59%) saturate(2651%) hue-rotate(346deg) brightness(97%) contrast(93%);
+}
+
+.text-logo{
+    color: #2C6E63;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-top: 15px;
+    margin-left: 30px;
+     font-family: "Bagel Fat One", systeme-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.code{
+    position: relative;
+    color: #fff;
+  font-family: "Tagesschrift", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.code::before{
+    content: "";
+    right: -8px;
+    top: 45%;
+    position: absolute;
+    height: 30px;
+    width: 2px;
+    background: #fff;
+    transform: translateY(-45%);
+}
+
+/* Navigation */
+.navbar {
+    background-color: #974400;
+    padding: 40px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+
+.nav-tabs {
+    border-bottom: none;
+    margin-bottom: 40px;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 5px;
+}
+
+.menu-tab {
+    background-color: #21534b;
+    color: white ;
+    font-weight: bold;
+    margin: 0 4px;
+    padding: 10px 20px ;
+    border-radius: 5px ;
+    transition: all 0.3s ease;
+}
+
+.menu-tab:hover {
+    background-color: #183e37;
+    transform: translateY(-3px);
+    color: white ;
+}
+
+.nav-tabs .nav-item .nav-link.menu-tab.active {
+    background-color: #FBE5B6;
+    color: #561217 ;
+    transform: translateY(-3px);
+    font-weight: bold;
+}
+/*Slider*/
+.slider {
+    width: var(--slider-width);
+    height: var(--slider-height);
+    margin-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto; /* Centre le slider */
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        #561217 10% 90%,
+        transparent
+    );
+}
+
+.slider .list {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+
+.slider .list .item:nth-child(1) { animation-delay: calc((20s / var(--slider-items)) * 0); }
+.slider .list .item:nth-child(2) { animation-delay: calc((20s / var(--slider-items)) * 1); }
+.slider .list .item:nth-child(3) { animation-delay: calc((20s / var(--slider-items)) * 2); }
+.slider .list .item:nth-child(4) { animation-delay: calc((20s / var(--slider-items)) * 3); }
+.slider .list .item:nth-child(5) { animation-delay: calc((20s / var(--slider-items)) * 4); }
+.slider .list .item:nth-child(6) { animation-delay: calc((20s / var(--slider-items)) * 5); }
+.slider .list .item:nth-child(7) { animation-delay: calc((20s / var(--slider-items)) * 6); }
+
+.slider .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes autoRun {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.item:hover {
+   transform: scale(1.15);
+   z-index: 10;
+   cursor: pointer;
+   animation: transform 0.3s ease;
+}
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-container {
+    position: relative;
+    background-color: #FBE5B6;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+    padding: 15px;
+}
+
+.price-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #561217;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.card-body {
+    background-color: white;
+    padding: 20px;
+}
+
+.menu-name {
+    color: #e7480f;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.85rem;
+    color: #555;
+    height: 60px;
+}
+
+/* Bouton Commander */
+.btn-order {
+    background-color: #2C6E63;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-order:hover {
+    background-color: #21534b;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .navbar-nav, .nav-tabs {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-item {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-text {
+        height: auto;
+    }
+}
