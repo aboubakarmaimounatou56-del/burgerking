@@ -35,24 +35,24 @@
             <div class="row">
                 <div class="col-12">
                     <ul class="nav nav-tabs justify-content-center mt-3" id="myTab" role="tablist">
-                        <?php
-                        
-                        $statement = $db->query('SELECT * FROM categories');
-                        $categories = $statement->fetchAll();
-                        $first = true;
-                        
-                        foreach($categories as $category) {
-                            $isActive = $first ? 'active' : '';
-                            $ariaSelected = $first ? 'true' : 'false';
-                            $categoryName = strtoupper($category['name']); 
-                            
-                            echo '<li class="nav-item" role="presentation">';
-                            echo '<a class="nav-link menu-tab ' . $isActive . '" id="' . $category['id'] . '-tab" data-toggle="tab" href="#category' . $category['id'] . '" role="tab" aria-controls="category' . $category['id'] . '" aria-selected="' . $ariaSelected . '">' . $categoryName . '</a>';
-                            echo '</li>';
-                            
-                            $first = false;
-                        }
-                        ?>
+                       <?php
+$statement = $db->query('SELECT * FROM categories');
+$categories = $statement->fetchAll();
+$first = true;
+
+foreach($categories as $category) {
+    $isActive = $first ? 'active' : '';
+    $ariaSelected = $first ? 'true' : 'false';
+    $categoryName = strtoupper($category['name']);
+    
+    echo '<li class="nav-item" role="presentation">';
+    // ATTENTION : On met href="#category' . $category['id'] . '"
+    echo '<a class="nav-link menu-tab ' . $isActive . '" id="tab-' . $category['id'] . '" data-bs-toggle="tab" href="#category' . $category['id'] . '" role="tab" aria-controls="category' . $category['id'] . '" aria-selected="' . $ariaSelected . '">' . $categoryName . '</a>';
+    echo '</li>';
+    
+    $first = false;
+}
+?>
                     </ul>
                 </div>
             </div>
@@ -81,6 +81,29 @@
         <div class="tab-content" id="myTabContent">
             <?php
             // Contenu des onglets
+            <?php
+$first = true;
+
+// 1. On lance la boucle des catégories pour créer les sections
+foreach($categories as $category) {
+    $isActive = $first ? 'show active' : '';
+    
+    echo '<div class="tab-pane fade ' . $isActive . '" id="category' . $category['id'] . '" role="tabpanel">';
+    echo '<div class="row">';
+
+        // -------------------------------------------------------------------------
+        // METTEZ ICI VOTRE CODE PHP EXISTANT (Celui qui va chercher les produits)
+        // C'est-à-dire la boucle qui fait les echo '<div class="col-md-4 mb-4">'; 
+        // avec les cartes, le bouton "COMMANDER" et le "Modal" (de l'image précédente)
+        // -------------------------------------------------------------------------
+
+    // 2. On referme proprement les deux div créées pour chaque catégorie
+    echo '</div>'; // Ferme la div class="row"
+    echo '</div>'; // Ferme la div class="tab-pane"
+    
+    $first = false;
+}
+?>
             $first = true;
             foreach($categories as $category) {
                 $isActive = $first ? 'show active' : '';
