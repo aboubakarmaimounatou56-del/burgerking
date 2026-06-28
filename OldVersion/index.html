@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Code</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="java/script.js" defer></script>
+    <!---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <div class="text-center" id="header">
+            <h1 class="text-logo"> <span class="glyphicon glyphicon-cutlery"></span>Burger <span class="code"></span> <span class="glyphicon glyphicon-cutlery"></span></h1>
+        </div>
+        
+        <!-- Navigation déplacée en dehors du header -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav nav-tabs justify-content-center mt-3" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link menu-tab active" id="menus-tab" data-toggle="tab" href="#menus" role="tab" aria-controls="menus" aria-selected="true">MENUS</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link menu-tab" id="burgers-tab" data-toggle="tab" href="#burgers" role="tab" aria-controls="burgers" aria-selected="false">BURGERS</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link menu-tab" id="snacks-tab" data-toggle="tab" href="#snacks" role="tab" aria-controls="snacks" aria-selected="false">SNACKS</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link menu-tab" id="salades-tab" data-toggle="tab" href="#salades" role="tab" aria-controls="salades" aria-selected="false">SALADES</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link menu-tab" id="boissons-tab" data-toggle="tab" href="#boissons" role="tab" aria-controls="boissons" aria-selected="false">BOISSONS</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link menu-tab" id="desserts-tab" data-toggle="tab" href="#desserts" role="tab" aria-controls="desserts" aria-selected="false">DESSERTS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--Slider Debut-->
+        <div class="slider-container">
+            <div class="slider" style="--slider-items: 6; --slider-height: 200px">
+                <div class="list">
+                    <div class="item"><img src="images/m1.png" alt="Menu 1"></div>
+                    <div class="item"><img src="images/d3.png" alt="Menu 2"></div>
+                    <div class="item"><img src="images/b3.png" alt="Menu 3"></div>
+                    <div class="item"><img src="images/d2.png" alt="Menu 4"></div>
+                    <div class="item"><img src="images/m5.png" alt="Menu 5"></div>
+                    <div class="item"><img src="images/d4.png" alt="Menu 6"></div>
+                    <div class="item"><img src="images/b1.png" alt="Menu 7"></div>
+                    <div class="item"><img src="images/b2.png" alt="Burger 2"></div>
+                    <div class="item"><img src="images/b3.png" alt="Burger 3"></div>
+                    <div class="item"><img src="images/b4.png" alt="Burger 4"></div>
+                    <div class="item"><img src="images/b5.png" alt="Burger 5"></div>
+                    <div class="item"><img src="images/b6.png" alt="Burger 6"></div>
+                </div>
+            </div>
+        </div>
+<!--Slider fin-->
+
+        <div class="tab-content" id="myTabContent">
+            <!-- Onglet MENUS -->
+            <div class="tab-pane fade show active" id="menus" role="tabpanel" aria-labelledby="menus-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="images/b1.png" class="card-img-top" alt="Menu Classic">
+                                    <span class="price-tag">8.90 €</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title menu-name">MENU CLASSIC</h5>
+                                    <p class="card-text">
+                                        SANDWICH: BURGER, SALADE, TOMATE, CORNICHON + FRITES + BOISSON
+                                    </p>
+                                    <button class="btn btn-order btn-block">
+                                        <i class="fas fa-shopping-cart"></i> COMMANDER
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="" class="card-img-top" alt="Menu Bacon">
+                                    <span class="price-tag">9.50 €</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title menu-name">MENU BACON</h5>
+                                    <p class="card-text">
+                                        SANDWICH: BURGER, FROMAGE, BACON, SALADE, TOMATE + FRITES + BOISSON
+                                    </p>
+                                    <button class="btn btn-order btn-block">
+                                        <i class="fas fa-shopping-cart"></i> COMMANDER
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="images/m1.png" class="card-img-top" alt="Menu Big">
+                                    <span class="price-tag">10.90 €</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title menu-name">MENU BIG</h5>
+                                    <p class="card-text">
+                                        SANDWICH: DOUBLE BURGER, FROMAGE, CORNICHON, SALADE + FRITES + BOISSON
+                                    </p>
+                                    <button class="btn btn-order btn-block">
+                                        <i class="fas fa-shopping-cart"></i> COMMANDER
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="images/m2.png" class="card-img-top" alt="Menu Chicken">
+                                    <span class="price-tag">9.90 €</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title menu-name">MENU CHICKEN</h5>
+                                    <p class="card-text">
+                                        SANDWICH: POULET FRIT, TOMATE, SALADE, MAYONNAISE + FRITES + BOISSON
+                                    </p>
+                                    <button class="btn btn-order btn-block">
+                                        <i class="fas fa-shopping-cart"></i> COMMANDER
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="images/m2.png" class="card-img-top" alt="Menu Fish">
+                                    <span class="price-tag">10.90 €</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title menu-name">MENU FISH</h5>
+                                    <p class="card-text">
+                                        SANDWICH: POISSON, SALADE, MAYONNAISE, CORNICHON + FRITES + BOISSON
+                                    </p>
+                                    <button class="btn btn-order btn-block">
+                                        <i class="fas fa-shopping-cart"></i> COMMANDER
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="images/m2.png" class="card-img-top" alt="Menu Double Steak">
+                                    <span class="price-tag">11.90 €</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title menu-name">MENU DOUBLE STEAK</h5>
+                                    <p class="card-text">
+                                        SANDWICH: DOUBLE BURGER, FROMAGE, BACON, SALADE, TOMATE + FRITES + BOISSON
+                                    </p>
+                                    <button class="btn btn-order btn-block">
+                                        <i class="fas fa-shopping-cart"></i> COMMANDER
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Onglet BURGERS -->
+            <div class="tab-pane fade" id="burgers" role="tabpanel" aria-labelledby="burgers-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="images/menu-classic.jpg" class="card-img-top" alt="Classic Burger">
+                                    <span class="price-tag">4.90 €</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title menu-name">CLASSIC BURGER</h5>
+                                    <p class="card-text">
+                                        BURGER, SALADE, TOMATE, CORNICHON
+                                    </p>
+                                    <button class="btn btn-order btn-block">
+                                        <i class="fas fa-shopping-cart"></i> COMMANDER
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="images/menu-bacon.jpg" class="card-img-top" alt="Bacon Burger">
+                                    <span class="price-tag">5.50 €</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title menu-name">BACON BURGER</h5>
+                                    <p class="card-text">
+                                        BURGER, FROMAGE, BACON, SALADE, TOMATE
+                                    </p>
+                                    <button class="btn btn-order btn-block">
+                                        <i class="fas fa-shopping-cart"></i> COMMANDER
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Autres burgers ici -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Onglet SNACKS -->
+            <div class="tab-pane fade" id="snacks" role="tabpanel" aria-labelledby="snacks-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="images/frites.jpg" class="card-img-top" alt="Frites">
+                                    <span class="price-tag">3.90 €</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title menu-name">FRITES</h5>
+                                    <p class="card-text">
+                                        PORTION DE FRITES CROUSTILLANTES
+                                    </p>
+                                    <button class="btn btn-order btn-block">
+                                        <i class="fas fa-shopping-cart"></i> COMMANDER
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Autres snacks ici -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Onglet SALADES -->
+            <div class="tab-pane fade" id="salades" role="tabpanel" aria-labelledby="salades-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="images/salade.jpg" class="card-img-top" alt="Salade">
+                                    <span class="price-tag">5.90 €</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title menu-name">SALADE VERTE</h5>
+                                    <p class="card-text">
+                                        SALADE, TOMATE, CONCOMBRE, OIGNON
+                                    </p>
+                                    <button class="btn btn-order btn-block">
+                                        <i class="fas fa-shopping-cart"></i> COMMANDER
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Autres salades ici -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Onglet BOISSONS -->
+            <div class="tab-pane fade" id="boissons" role="tabpanel" aria-labelledby="boissons-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="images/soda.jpg" class="card-img-top" alt="Soda">
+                                    <span class="price-tag">1.90 €</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title menu-name">SODA</h5>
+                                    <p class="card-text">
+                                        COCA-COLA, COCA-COLA ZERO, FANTA, SPRITE
+                                    </p>
+                                    <button class="btn btn-order btn-block">
+                                        <i class="fas fa-shopping-cart"></i> COMMANDER
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Autres boissons ici -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Onglet DESSERTS -->
+            <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="images/brownie.jpg" class="card-img-top" alt="Brownie">
+                                    <span class="price-tag">3.90 €</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title menu-name">BROWNIE</h5>
+                                    <p class="card-text">
+                                        BROWNIE AU CHOCOLAT FONDANT
+                                    </p>
+                                    <button class="btn btn-order btn-block">
+                                        <i class="fas fa-shopping-cart"></i> COMMANDER
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Autres desserts ici -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery et Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

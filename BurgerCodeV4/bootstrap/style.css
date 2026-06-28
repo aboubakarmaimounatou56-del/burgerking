@@ -1,0 +1,139 @@
+/* Styles généraux */
+body {
+    background-image: url('../images/bg.png');
+    background-repeat: repeat;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+#header {
+    background-color: #222;
+    padding: 20px 0;
+}
+
+.burger-title {
+    color: #e7480f;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #000;
+    margin-top: 15px;
+}
+
+.fork-icon {
+    height: 40px;
+    margin: 0 15px;
+    filter: invert(65%) sepia(59%) saturate(2651%) hue-rotate(346deg) brightness(97%) contrast(93%);
+}
+.text-logo{
+    color: #2ecc71;
+    text-transform: uppercase;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #222;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.menu-tab {
+    background-color: #e7480f;
+    color: white ;
+    font-weight: bold;
+    margin: 0 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-tab:hover, .nav-item.active .menu-tab {
+    background-color: #c13c0a;
+    transform: translateY(-3px);
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-container {
+    position: relative;
+    background-color: #ffcc00;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+    padding: 15px;
+}
+
+.price-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #2ecc71;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.card-body {
+    background-color: white;
+    padding: 20px;
+}
+
+.menu-name {
+    color: #e7480f;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.85rem;
+    color: #555;
+    height: 60px;
+}
+
+/* Bouton Commander */
+.btn-order {
+    background-color: #e7480f;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-order:hover {
+    background-color: #c13c0a;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-item {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-text {
+        height: auto;
+    }
+}
